@@ -1,0 +1,23 @@
+{
+  "name": "simonadev-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dead-server --port=7771 --host=localhost",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "PORTFOLIO",
+    "WEB",
+    "DEVELOPER"
+  ],
+  "author": "Simona",
+  "license": "MIT",
+  "description": "SimonaDev portfolio page",
+  "devDependencies": {
+    "dead-server": "^1.0.9"
+  }
+}
