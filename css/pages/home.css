@@ -14,6 +14,66 @@
 /* header end */
 
 /* hero start */
+.hero {
+    position: relative;
+}
+
+.hero-information {
+    position: absolute;
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 8rem;
+}
+
+.hero-information h1 {
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Great Vibes', system-ui;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-top: 7rem;
+    font-size: 50px;
+}
+
+.hero-information .social-aside {
+    background: rgba(0, 0, 3, 0.5);
+    min-width: 50px;
+    max-width: 80px;
+}
+
+.hero-information .social-aside ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-aside ul li {
+    font-size: 30px;
+    padding: 0.5rem;
+}
+
+.social-aside ul li i {
+    color: aliceblue;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-aside ul li:hover i {
+    color: rgb(20, 84, 123);
+    transform: scale(1.2);
+}
+
+.hero-information .hero-text-container {
+    background: rgba(0, 0, 3, 0.5);
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* hero end */
 
 /* about start */
@@ -90,7 +150,15 @@
 
 /* footer start */
 /* footer end */
-
+@media (max-width: 992px) {
+    .hero-information .hero-text-container {
+        height: 200px;
+    }
+    .hero-text-container h1 {
+        font-size: 35px;
+        margin-top: 5rem;
+    }
+}
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
@@ -102,5 +170,16 @@
     hr {
         margin-left: auto;
         margin-right: auto;
+    }
+    .hero-information {
+        gap: 3rem;
+        top: 3.5rem;
+    }
+    .hero-information .hero-text-container {
+        height: 150px;
+    }
+    .hero-information .hero-text-container h1 {
+        font-size: 30px;
+        margin-top: 3rem;
     }
 }
