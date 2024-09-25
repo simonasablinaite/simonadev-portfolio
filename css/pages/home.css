@@ -17,6 +17,26 @@
 /* hero end */
 
 /* about start */
+
+.about-content {
+    text-align: start;
+    display: flex;
+    align-items: center;
+}
+
+.about-content hr {
+    margin-left: 0;
+}
+
+.about img {
+    width: 100%;
+    opacity: 0.6;
+}
+
+.about img:hover {
+    opacity: 1;
+    transition: 1s;
+}
 /* about end */
 
 /* services start */
@@ -70,3 +90,17 @@
 
 /* footer start */
 /* footer end */
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
