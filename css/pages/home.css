@@ -2,6 +2,7 @@
 @import '../base/base.css';
 @import '../base/layout.css';
 /* 3rd-party */
+
 /* components */
 @import '../components/header.css';
 @import '../components/button.css';
@@ -19,6 +20,43 @@
 /* about end */
 
 /* services start */
+.experience {
+    background-image: url(../../img/background.jpg);
+}
+
+.experience .section-title,
+.experience .section-description {
+    text-align: center;
+}
+
+.experience .section-title {
+    color: rgb(20, 84, 123);
+}
+
+.experience-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.2);
+    color: rgb(20, 84, 123);
+}
+
+.experience-card:hover i {
+    color: rgb(20, 84, 123);
+}
+
+.experience-card p {
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
 /* services end */
 
 /* experience start */
@@ -26,6 +64,9 @@
 
 /* gallery start */
 /* gallery end */
+
+/* contact start */
+/* contact end */
 
 /* footer start */
 /* footer end */

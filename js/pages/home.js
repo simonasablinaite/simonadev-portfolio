@@ -20,6 +20,10 @@
    //  gallery start 
    //  gallery end 
 
+   //  contact start 
+   //  contact end 
+
+
    //  footer start 
    //  footer end 
 

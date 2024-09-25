@@ -1,3 +1,9 @@
+/*
+ font-family: "Dosis", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Great Vibes", system-ui;
+*/
+
 /* reset */
 html {
     scroll-behavior: smooth;
@@ -12,15 +18,28 @@ body * {
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-        sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .section-title {
+    text-transform: uppercase;
+    font-size: 55px;
 }
 
 .section-description {
+    margin: 1.5rem 0;
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif;
+    line-height: 35px;
+    letter-spacing: 1px;
 }
 
-p {
+hr {
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 10px 1px black;
+    margin-top: 0.5rem;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
