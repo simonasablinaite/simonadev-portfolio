@@ -1,5 +1,5 @@
-function skills(skillsData) {
-   const skillsContainerDOM = document.getElementById('skills-container');
+export const skills = (selector, skillsData) => {
+   const skillsContainerDOM = document.getElementById(selector);
 
    let HTML = '';
 
@@ -15,6 +15,4 @@ function skills(skillsData) {
 
    skillsContainerDOM.innerHTML = HTML;
 
-}
-
-export { skills };
+};

@@ -1,23 +1,23 @@
 const skillsData = [
    {
       icon: "fa-html5",
-      experienceTitle: 'HTML'
+      skillsTitle: 'HTML'
    },
    {
       icon: "fa-css3-alt",
-      experienceTitle: 'CSS'
+      skillsTitle: 'CSS'
    },
    {
       icon: "fa-js",
-      experienceTitle: 'JS'
+      skillsTitle: 'JS'
    },
    {
       icon: "fa-react",
-      experienceTitle: 'REACT'
+      skillsTitle: 'REACT'
    },
    {
       icon: "fa-php",
-      experienceTitle: 'PHP'
+      skillsTitle: 'PHP'
    },
 ];
 

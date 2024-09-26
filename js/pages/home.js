@@ -16,7 +16,7 @@ import { skillsData } from '../data/skillsData.js';
    //  services end 
 
    //  skills start 
-   skills(skillsData);
+   skills("skills-container" ,skillsData);
    //  skills end 
 
    //  gallery start 
