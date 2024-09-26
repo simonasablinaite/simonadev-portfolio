@@ -1,9 +1,30 @@
+import { IsValid } from "../isValid/IsValid.js";
+
 export const skills = (selector, skillsData) => {
+
+   if (typeof selector !== 'string' || selector === '') {
+      throw new Error('Selector mus not be an empty typeof string'); //fatal error del tuscio stringo
+   }
+
+   if (!IsValid.nonEmptyArray(skillsData)) {
+      throw new Error('The data must not be an empty array'); //fatal error del tuscio stringo
+   }
+
    const skillsContainerDOM = document.getElementById(selector);
+   if (skillsContainerDOM === null) {
+      throw new Error(`An element could not be found in the given selector ${selector}`); //fatal error del nepavykusio rasti elemento pagal pateikta selekroiu
+   }
 
    let HTML = '';
 
    for (const item of skillsData) {
+      // Duomenu, esanciu skillsData masyve patikrinimas
+      if (
+         !IsValid.object(item) ||
+         !IsValid.icon(item.icon) ||
+         !IsValid.skillsTitle(item.skillsTitle)) {
+         continue;
+      }
       HTML += `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 skills-card">
          <div class="skills-icon">
