@@ -99,21 +99,21 @@
 }
 /* about end */
 
-/* services start */
-.experience {
+/* skills start */
+.skills {
     background-image: url(../../img/background.jpg);
 }
 
-.experience .section-title,
-.experience .section-description {
+.skills .section-title,
+.skills .section-description {
     text-align: center;
 }
 
-.experience .section-title {
+.skills .section-title {
     color: rgb(20, 84, 123);
 }
 
-.experience-card {
+.skills-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,22 +122,22 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.experience-card:hover {
+.skills-card:hover {
     transform: scale(1.2);
     color: rgb(20, 84, 123);
 }
 
-.experience-card:hover i {
+.skills-card:hover i {
     color: rgb(20, 84, 123);
 }
 
-.experience-card p {
+.skills-card p {
     margin-top: 1rem;
     font-size: 20px;
     font-weight: 500;
 }
 
-/* services end */
+/* skills end */
 
 /* experience start */
 /* experience end */

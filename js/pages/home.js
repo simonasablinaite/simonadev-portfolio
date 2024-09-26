@@ -1,5 +1,6 @@
 // IMPOTRS
-
+import {skills} from '../components/skills/skills.js';
+import { skillsData } from '../data/skillsData.js';
 // EXECUTION
 
 //  header start 
@@ -14,8 +15,9 @@
    //  services start 
    //  services end 
 
-   //  experience start 
-   //  experience end 
+   //  skills start 
+   skills(skillsData);
+   //  skills end 
 
    //  gallery start 
    //  gallery end 
