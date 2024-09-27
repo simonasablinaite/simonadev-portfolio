@@ -14,19 +14,20 @@ class IsValid {
    }
 
    static icon(str) {
-      if (!str.icon ||
-         typeof str.icon !== 'string' ||
-         str.icon.length > 15 ||
+      if (
+         typeof str !== 'string' ||
+         str.length > 15 ||
          str === ''
       ) {
          return false;
       }
       return true;
    }
-   static skillsTitle(str) {
-      if (!str.skillsTitle ||
-         typeof str.skillsTitle !== 'string' ||
-         str.skillsTitle.length > 15 ||
+
+   static text(str) {
+      if (
+         typeof str !== 'string' ||
+         str.length > 15 ||
          str === '') {
          return false;
       }

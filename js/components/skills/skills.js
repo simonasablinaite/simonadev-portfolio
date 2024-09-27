@@ -1,12 +1,12 @@
 import { IsValid } from "../isValid/IsValid.js";
 
-export const skills = (selector, skillsData) => {
+export const skills = (selector, data) => {
 
    if (typeof selector !== 'string' || selector === '') {
       throw new Error('Selector mus not be an empty typeof string'); //fatal error del tuscio stringo
    }
 
-   if (!IsValid.nonEmptyArray(skillsData)) {
+   if (!IsValid.nonEmptyArray(data)) {
       throw new Error('The data must not be an empty array'); //fatal error del tuscio stringo
    }
 
@@ -17,21 +17,24 @@ export const skills = (selector, skillsData) => {
 
    let HTML = '';
 
-   for (const item of skillsData) {
+   for (const item of data) {
       // Duomenu, esanciu skillsData masyve patikrinimas
-      if (
-         !IsValid.object(item) ||
-         !IsValid.icon(item.icon) ||
-         !IsValid.skillsTitle(item.skillsTitle)) {
+      if (!IsValid.object(item) || !IsValid.icon(item.icon)
+      )
+      //    !IsValid.text(item.skillsTitle)) 
+      {
          continue;
       }
+
       HTML += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 skills-card">
-         <div class="skills-icon">
-            <i class="fa-brands ${item.icon} fa-6x"></i>
-         </div>
-      <p>${item.skillsTitle}</p>
-      </div>`
+         <div class="col-12 col-sm-6 col-md-4 col-lg-3 skills-card">
+            <div class="skills-icon">
+               <i class="fa-brands ${item.icon} fa-6x"></i>
+            </div>
+         <p>${item.skillsTitle}</p>
+         </div>`
+
+
    }
 
    skillsContainerDOM.innerHTML = HTML;
