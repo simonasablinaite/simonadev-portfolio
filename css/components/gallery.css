@@ -12,15 +12,26 @@
 }
 
 .portfolio > .filter {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .portfolio > .filter > .option {
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 0.3rem;
+
+    background: #ccc;
+    color: aliceblue;
+    cursor: pointer;
+    border: 1px solid #bebcbc;
+    transition: all 0.3s;
 }
 
+.portfolio > .filter > .option:hover,
 .portfolio > .filter > .option.active {
-}
-
-.portfolio > .filter > .option:hover {
+    background: #22699a;
 }
 
 .portfolio > .gallery-list {
