@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+header > img {
+    width: 250px;
+}
+
+header > nav {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+header > nav a {
+    text-decoration: none;
+    color: #22699a;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+header > nav a:hover {
+    color: #222d4f;
+    border-bottom: 1px solid #22699a;
+    transform: scale(1.2);
+}
+
+header > .btn {
+}

@@ -1,0 +1,63 @@
+.gallery .section-title {
+    text-align: center;
+}
+
+.gallery .section-description {
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    gap: 30px;
+}
+
+.portfolio > .filter {
+}
+
+.portfolio > .filter > .option {
+}
+
+.portfolio > .filter > .option.active {
+}
+
+.portfolio > .filter > .option:hover {
+}
+
+.portfolio > .gallery-list {
+    display: grid;
+    gap: 20px;
+}
+
+.porfolio > .gallery-list > .item {
+    width: 100%;
+}
+
+.portfolio .item img {
+    width: 100%;
+}
+
+.portfolio .item > .hover-layer {
+}
+
+.portfolio .hover-layer > .icon {
+}
+
+.portfolio > .item-description {
+}
+
+.portfolio .item-description a {
+}
+.portfolio .item-description .item-tag {
+}
+
+@media (min-width: 768px) {
+    .portfolio > .gallery-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio > .gallery-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

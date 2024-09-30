@@ -4,8 +4,9 @@
 /* 3rd-party */
 
 /* components */
-@import '../components/header.css';
 @import '../components/button.css';
+@import '../components/gallery.css';
+@import '../components/header.css';
 @import '../components/footer.css';
 
 /* CUSTOM */
@@ -140,6 +141,7 @@
 /* skills end */
 
 /* gallery start */
+
 /* gallery end */
 
 /* contact start */

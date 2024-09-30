@@ -19,10 +19,7 @@ export const skills = (selector, data) => {
 
    for (const item of data) {
       // Duomenu, esanciu skillsData masyve patikrinimas
-      if (!IsValid.object(item) || !IsValid.icon(item.icon)
-      )
-      //    !IsValid.text(item.skillsTitle)) 
-      {
+      if (!IsValid.object(item) || !IsValid.icon(item.icon) || !IsValid.text(item.skillsTitle)) {
          continue;
       }
 
