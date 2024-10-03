@@ -1,5 +1,7 @@
 // IMPOTRS
+import { Gallery } from '../components/gallery/Gallery.js';
 import {skills} from '../components/skills/skills.js';
+import { galleryData } from '../data/galleryData.js';
 import { skillsData } from '../data/skillsData.js';
 // EXECUTION
 
@@ -21,6 +23,7 @@ import { skillsData } from '../data/skillsData.js';
    //  skills end 
 
    //  gallery start 
+ new Gallery('#portfolio_block', portfolioData);
    //  gallery end 
 
    //  contact start 
