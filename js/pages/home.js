@@ -23,7 +23,7 @@ import { skillsData } from '../data/skillsData.js';
    //  skills end 
 
    //  gallery start 
- new Gallery('#portfolio_block', portfolioData);
+ new Gallery('#portfolio_block', galleryData);
    //  gallery end 
 
    //  contact start 

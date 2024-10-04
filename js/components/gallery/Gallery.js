@@ -1,3 +1,5 @@
+import { IsValid } from "../isValid/IsValid.js";
+
 class Gallery {
    /**
     * 
@@ -16,9 +18,11 @@ class Gallery {
          max: 6,
       };
       this.rendering = {
-         strategy: 'loading-data',
-         order: 'az'
+         strategy: 'title',
+         order: 'za'
       }
+
+      this.dataForRendering = [];
 
       this.init();
    }
@@ -27,6 +31,8 @@ class Gallery {
       if (!this.isValidSelector() || !this.isValidData()) {
          return false;
       }
+
+      this.filterDataForRendering();
       this.render();
    }
 
@@ -46,32 +52,72 @@ class Gallery {
    }
 
    isValidData() {
-      if (typeof this.data !== 'object' ||
-         this.data === null ||
-         Array.isArray(this.data)) {
+      if (!IsValid.object(this.data)) {
          return false;
       }
 
       // Validuojamas this.data.size...
-      const size = this.data.size;
-      if (typeof size !== 'object' ||
-         size === null || Array.isArray(size)
-      ) {
-         if (typeof size.min === 'number' && isFinite(size.min) && size.min > 0 && size.min % 1 === 0) {
-            this.size.min = size.min;
+      const { size } = this.data;
+      if (!IsValid.object(size)) {
+         const { min, max } = size;
+         if (IsValid.positiveInteger(min)) {
+            this.size.min = min;
+         }
+
+         if (IsValid.positiveInteger(max)) {
+            this.size.max = max;
          }
       }
       // Validuojamas this.data.rendering...
+      const { rendering } = this.data;
+      if (!IsValid.object(rendering)) {
+         const { strategy, order } = rendering;
+         if (IsValid.notEmptyString(strategy)) {
+            this.rendering.strategy = strategy;
+         }
+
+         if (IsValid.notEmptyString(order)) {
+            this.rendering.order = order;
+         }
+      }
       // Validuojamas this.data.content...
-      if (!Array.isArray(this.data.content) || this.data.content.length === 0) {
+      if (!IsValid.nonEmptyArray(this.data.content)) {
          return false;
       }
       return true;
    }
+
+   filterDataForRendering() {
+      const { max } = this.size;
+      const { strategy, order } = this.rendering;
+
+      if (strategy === 'loadingData') {
+         this.dataForRendering = this.filterDataByLoadingData(order);
+      }
+
+      if (strategy === 'title') {
+         this.dataForRendering = this.filterDataByTitle(order);
+      }
+
+      this.dataForRendering = this.dataForRendering.slice(0, max);
+   }
+
+   filterDataByLoadingData(order) {
+      const dataCopy = [...this.data.content];
+      return order === 'az' ? dataCopy : dataCopy.reverse();
+   }
+   // Kitas filtravimo metodas galetu buti pavyzdziui, pagal pavadinima:
+   filterDataByTitle(order) {
+      const dataCopy = [...this.data.content];
+      dataCopy.sort((a, b) => a.title > b.title ? 1 : a.title === b.title ? 0 : -1)
+      return order === 'az' ? dataCopy : dataCopy.reverse();
+   }
+
    // Render paskirtis - i rasta vieta iterpti visa reikiama HTML'a:
    render() {
       let HTML = '';
 
+      console.log(this.dataForRendering);
       // HTML += ...
       // HTML += ...
       // HTML += ...
