@@ -1,11 +1,20 @@
-.gallery {
-    display: grid;
-    gap: 30px;
+.portfolio .section-title-content {
+    text-align: center;
 }
 
-.gallery .section-title {
-    margin-left: auto;
-    margin-bottom: auto;
+.portfolio {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: aliceblue;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    justify-items: center;
 }
 
 .gallery > .filter {
@@ -31,113 +40,92 @@
     color: #fff;
 }
 
-.gallery > .content {
-    display: grid;
-    gap: 20px;
-}
-.gallery > .content > .item {
-    --fs: 10px;
-    width: 100%;
-    height: 330px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+.portfolio .item {
+    width: 400px;
+    position: relative;
+    border-radius: 2rem;
     overflow: hidden;
-    position: relative;
-    transition: all 0.3s;
 }
-.gallery > .content > .item.hidden {
-    display: none;
-}
-.gallery .item > .visual {
-    width: 100%;
-    font-size: inherit;
-    height: calc(330px - var(--fs) * 8.5);
-    position: relative;
-}
-.gallery .visual > .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: all 0.3s;
-}
-.gallery .visual > .hover-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    background-color: #0005;
-    transition: all 0.3s;
-}
-.gallery .item .icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 2.5em;
-    font-size: 18px;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all 0.3s;
-}
-.gallery .item > .description {
-    width: 100%;
-    font-size: inherit;
-    padding: calc(var(--fs) * 2);
-    text-align: center;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-}
-.gallery .description > .title {
-    font-size: inherit;
-    font-size: calc(var(--fs) * 2);
-    line-height: calc(var(--fs) * 2);
-}
-.gallery .description > .tag {
-    font-size: inherit;
-    font-size: calc(var(--fs) * 1.5);
-    margin-top: calc(var(--fs));
-    line-height: calc(var(--fs) * 1.5);
-}
-.gallery .description > .btn {
+
+.portfolio .item.hidden {
     display: none;
 }
 
-.gallery > .content > .item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 12px #0003;
+.item img {
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
 }
-.gallery .item:hover .img {
-    transform: rotate(5deg) scale(1.15);
+
+.item .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #22699a);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
 }
-.gallery .item:hover .hover-layer {
-    opacity: 1;
+
+.item a {
+    text-decoration: none;
+    color: aliceblue;
 }
-.gallery .item:hover .icon {
-    transform: translate(-50%, -50%);
-    opacity: 1;
+
+.item:hover .portfolio-layer {
+    transform: translateY(0);
 }
-.gallery .item .icon:hover {
-    background-color: #fff;
-    color: var(--main-color);
+
+.portfolio-layer h3 {
+    font-size: 2.5rem;
+}
+
+.portfolio-layer .portfolio-description {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 1rem 0;
+}
+
+.portfolio-layer .tag {
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+
+.portfolio-layer .btn {
+    cursor: pointer;
+    background: #353b48;
+    border: none;
+    width: 100px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .gallery > .content {
-        grid-template-columns: 1fr 1fr;
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .portfolio .item {
+        width: 350px;
+        height: 300px;
+    }
+    .portfolio .item img {
+        height: 100%;
     }
 }
 
 @media (min-width: 992px) {
-    .gallery > .content {
-        grid-template-columns: 1fr 1fr 1fr;
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }

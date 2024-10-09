@@ -5,6 +5,12 @@
 */
 
 /* reset */
+
+:root {
+    --main-text-color: #22699a;
+    --second-text-color: #222d4f;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,6 +30,7 @@ body {
 .section-title {
     text-transform: uppercase;
     font-size: 55px;
+    color: var(--main-text-color);
 }
 
 .section-description {
@@ -32,6 +39,7 @@ body {
     font-family: 'Dosis', sans-serif;
     line-height: 35px;
     letter-spacing: 1px;
+    color: var(--second-text-color);
 }
 
 hr {
@@ -46,4 +54,6 @@ hr {
 
 a {
     cursor: pointer;
+    text-decoration: none;
+    color: #030303;
 }
