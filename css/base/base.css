@@ -7,8 +7,18 @@
 /* reset */
 
 :root {
-    --main-text-color: #22699a;
-    --second-text-color: #222d4f;
+    /* colors: */
+    --main-color: #22699a;
+    --second--color: #222d4f;
+    --third-color: aliceblue;
+    --fourth-color: #353b48;
+
+    /* font sizes */
+    --fs-55: 55px;
+    --fs-25: 25px;
+    --fs-14: 14px;
+
+    /* spaces: */
 }
 
 html {
@@ -29,17 +39,17 @@ body {
 
 .section-title {
     text-transform: uppercase;
-    font-size: 55px;
-    color: var(--main-text-color);
+    font-size: var(--fs-55);
+    color: var(--main-color);
 }
 
 .section-description {
     margin: 1.5rem 0;
-    font-size: 25px;
+    font-size: var(--fs-25);
     font-family: 'Dosis', sans-serif;
     line-height: 35px;
     letter-spacing: 1px;
-    color: var(--second-text-color);
+    color: var(--second-color);
 }
 
 hr {

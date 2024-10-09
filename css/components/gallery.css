@@ -6,7 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: aliceblue;
+    color: var(--third-color);
 }
 
 .portfolio-container {
@@ -25,10 +25,10 @@
 }
 .gallery > .filter > .option {
     padding: 0.6em 1em;
-    font-size: 14px;
+    font-size: var(--fs-14);
     line-height: 1em;
-    background-color: #fff;
-    color: #333;
+    background-color: var(--third-color);
+    color: var(--fourth-color);
     border: 1px solid #ccc;
     border-radius: 0.4em;
     cursor: pointer;
@@ -36,8 +36,8 @@
 }
 .gallery > .filter > .option.active,
 .gallery > .filter > .option:hover {
-    background-color: rgb(20, 84, 123);
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--third-color);
 }
 
 .portfolio .item {
@@ -63,7 +63,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #22699a);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +76,7 @@
 
 .item a {
     text-decoration: none;
-    color: aliceblue;
+    color: var(--third-color);
 }
 
 .item:hover .portfolio-layer {
@@ -94,13 +94,13 @@
 }
 
 .portfolio-layer .tag {
-    font-size: 14px;
+    font-size: var(--fs-14);
     margin-bottom: 1rem;
 }
 
 .portfolio-layer .btn {
     cursor: pointer;
-    background: #353b48;
+    background: var(--fourth-color);
     border: none;
     width: 100px;
 }
