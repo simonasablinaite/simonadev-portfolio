@@ -22,3 +22,21 @@ function renderNav(selector, data) {
 }
 
 export { renderNav };
+
+function toggleMenu() {
+   const navDOM = document.querySelector('nav');
+   const burgerMenuDOM = document.querySelector('.menu-icon i');
+   ;
+
+   burgerMenuDOM.addEventListener('click', () => {
+
+      if (navDOM.style.display === 'flex') {
+         navDOM.style.display = 'none'
+      } else {
+         navDOM.style.display = 'flex'
+      }
+   })
+
+
+}
+export { toggleMenu }

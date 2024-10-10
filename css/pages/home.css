@@ -16,11 +16,12 @@
 
 /* hero start */
 .hero {
-    position: relative;
+    /* position: relative; */
+    height: 100vh;
 }
 
 .hero-information {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     gap: 8rem;
     align-items: center;
