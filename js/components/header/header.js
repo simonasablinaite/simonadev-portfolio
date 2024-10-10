@@ -15,6 +15,10 @@ function renderNav(selector, data) {
    contactBtn.classList.add('btn');
    contactBtn.innerHTML = 'Contact Me';
 
+   contactBtn.addEventListener('click', () => {
+      contactBtn.setAttribute('href', '#contact')
+   })
+
    // rezultato grazinimas:
    // Grazinamas/isvedamas HTML rezultatas i ekrana: += naudojama del to, kad jau prie esamo turinio butu pridetas papildomas turinys
    DOM.insertAdjacentHTML('beforeend', `<nav>${HTML}</nav>`);
@@ -39,4 +43,5 @@ function toggleMenu() {
 
 
 }
-export { toggleMenu }
+export { toggleMenu };
+
