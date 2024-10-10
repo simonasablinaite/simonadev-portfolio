@@ -5,7 +5,7 @@ header {
     padding: 2rem 1rem;
 }
 header > img {
-    width: 250px;
+    width: 150px;
 }
 
 header > nav {
@@ -15,8 +15,9 @@ header > nav {
 }
 
 header > nav a {
+    display: none;
     text-decoration: none;
-    color: #22699a;
+    color: var(--main-color);
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.3s;
@@ -24,7 +25,28 @@ header > nav a {
 }
 
 header > nav a:hover {
-    color: #222d4f;
-    border-bottom: 1px solid #22699a;
+    color: var(--second-color);
+    border-bottom: 1px solid var(--main-color);
     transform: scale(1.2);
+}
+
+header i {
+    font-size: 30px;
+}
+
+header .btn {
+    width: 120px;
+    font-size: 12px;
+}
+
+@media (min-width: 992px) {
+    header > nav a {
+        display: flex;
+    }
+    header > .burger-menu {
+        display: none;
+    }
+    header img {
+        width: 200px;
+    }
 }
